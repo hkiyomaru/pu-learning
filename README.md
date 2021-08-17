@@ -1,4 +1,4 @@
-# Understanding PU Learning through Implementating its Algorithms
+# Understanding PU Learning Through Implementing Its Algorithms
 
 ## Development Environment
 
