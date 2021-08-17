@@ -27,3 +27,8 @@ $ poetry install
 - [rebalancing](./notebooks/rebalancing.ipynb): Learns a traditional classifier from PU data by a rebalancing method.
 - [labeling_probability](notebooks/.ipynb_checkpoints/labeling_probability.ipynb): Learns a traditional classifier from PU data by incorporating labeling probabilities estimated by a non-traditional classifier.
 - [empirical_risk_minimization](./notebooks/empirical_risk_minimization.ipynb): Learns a traditional classifier from PU data based on empirical risk minimization.
+
+## Reference
+
+- Tutorial: https://dtai.cs.kuleuven.be/tutorials/pulearning/
+- Survey (the above tutorial is based on this): https://arxiv.org/abs/1811.04820
