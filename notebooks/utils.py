@@ -20,7 +20,6 @@ def visualize_pn_data(x: np.array, y: np.array):
     )
 
 
-
 def visualize_pu_data(x: np.array, s: np.array):
     df = pd.DataFrame.from_dict(
         {
