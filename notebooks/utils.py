@@ -3,6 +3,11 @@ import pandas as pd
 import numpy as np
 
 
+POSITIVE_COLOR = "#1E90FF"
+NEGATIVE_COLOR = "#FF6347"
+UNLABELED_COLOR = "#A9A9A9"
+
+
 def visualize_pn_data(x: np.array, y: np.array):
     df = pd.DataFrame.from_dict(
         {
@@ -16,8 +21,27 @@ def visualize_pn_data(x: np.array, y: np.array):
         x="x_0",
         y="x_1",
         color="y",
-        color_discrete_map={"Positive": "#1E90FF", "Negative": "#FF6347"},
+        color_discrete_map={"Negative": NEGATIVE_COLOR, "Positive": POSITIVE_COLOR},
     )
+
+
+def visualize_pn_data_proba(x: np.array, y_proba: np.array):
+    df = pd.DataFrame.from_dict(
+        {
+            "x_0": x[:, 0],
+            "x_1": x[:, 1],
+            "y": y_proba,
+        }
+    )
+    return px.scatter(
+        df,
+        x="x_0",
+        y="x_1",
+        color="y",
+        color_continuous_scale=[NEGATIVE_COLOR, POSITIVE_COLOR],
+        range_color=[0.0, 1.0],
+    )
+
 
 
 def visualize_pu_data(x: np.array, s: np.array):
@@ -33,5 +57,23 @@ def visualize_pu_data(x: np.array, s: np.array):
         x="x_0",
         y="x_1",
         color="s",
-        color_discrete_map={"Positive": "#1E90FF", "Unlabeled": "#A9A9A9"},
+        color_discrete_map={"Unlabeled": UNLABELED_COLOR, "Positive": POSITIVE_COLOR},
+    )
+
+
+def visualize_pu_data_proba(x: np.array, s_proba: np.array):
+    df = pd.DataFrame.from_dict(
+        {
+            "x_0": x[:, 0],
+            "x_1": x[:, 1],
+            "s": s_proba,
+        }
+    )
+    return px.scatter(
+        df,
+        x="x_0",
+        y="x_1",
+        color="s",
+        color_continuous_scale=[UNLABELED_COLOR, POSITIVE_COLOR],
+        range_color=[0.0, 1.0],
     )
