@@ -1,7 +1,7 @@
 import plotly.express as px
 import pandas as pd
 import numpy as np
-
+from sklearn.metrics import recall_score
 
 POSITIVE_COLOR = "#1E90FF"
 NEGATIVE_COLOR = "#FF6347"
@@ -43,7 +43,6 @@ def visualize_pn_data_proba(x: np.array, y_proba: np.array):
     )
 
 
-
 def visualize_pu_data(x: np.array, s: np.array):
     df = pd.DataFrame.from_dict(
         {
@@ -77,3 +76,12 @@ def visualize_pu_data_proba(x: np.array, s_proba: np.array):
         color_continuous_scale=[UNLABELED_COLOR, POSITIVE_COLOR],
         range_color=[0.0, 1.0],
     )
+
+
+def f1_prime(y: np.array, y_hat: np.array):
+    r = recall_score(y, y_hat)
+    ratio_p = len(y_hat[y_hat == 1]) / len(y_hat)
+    if ratio_p == 0.0:
+        return 0.0
+    else:
+        return r ** 2 / ratio_p
