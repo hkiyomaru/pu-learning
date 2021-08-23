@@ -9,7 +9,9 @@ here = os.path.dirname(__file__)
 ALPHA = 0.8  # class prior
 C = 0.2  # label frequency
 
-N = 10000  # number of examples
+N_TRAIN = 10000  # number of training examples
+N_VALID = 1000  # number of validation examples
+N_TEST = 1000  # number of test examples
 
 MEAN_P = [3, 3]  # the mean of the positive example's distribution
 COV_P = [[1, 0], [0, 1]]  # the covariance matrix of the positive example's distribution
@@ -19,10 +21,15 @@ COV_N = [[1, 0], [0, 1]]  # the covariance matrix of the positive example's dist
 
 
 def load_scar():
-    x = []
-    y = []
-    s = []
-    with open(os.path.join(here, "scar.csv")) as f:
+    train = _load_scar(os.path.join(here, "train.csv"))
+    valid = _load_scar(os.path.join(here, "valid.csv"))
+    test = _load_scar(os.path.join(here, "test.csv"))
+    return train, valid, test
+
+
+def _load_scar(path: str):
+    x, y, s = [], [], []
+    with open(path) as f:
         reader = csv.DictReader(f)
         for row in reader:
             x.append([row["x_0"], row["x_1"]])
