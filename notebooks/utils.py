@@ -8,7 +8,7 @@ NEGATIVE_COLOR = "#FF6347"
 UNLABELED_COLOR = "#A9A9A9"
 
 
-def visualize_pn_data(x: np.array, y: np.array):
+def plot_x_y(x: np.array, y: np.array):
     df = pd.DataFrame.from_dict(
         {
             "x_0": x[:, 0],
@@ -25,7 +25,7 @@ def visualize_pn_data(x: np.array, y: np.array):
     )
 
 
-def visualize_pn_data_proba(x: np.array, y_proba: np.array):
+def plot_x_y_proba(x: np.array, y_proba: np.array):
     df = pd.DataFrame.from_dict(
         {
             "x_0": x[:, 0],
@@ -43,7 +43,7 @@ def visualize_pn_data_proba(x: np.array, y_proba: np.array):
     )
 
 
-def visualize_pu_data(x: np.array, s: np.array):
+def plot_x_s(x: np.array, s: np.array):
     df = pd.DataFrame.from_dict(
         {
             "x_0": x[:, 0],
@@ -60,7 +60,7 @@ def visualize_pu_data(x: np.array, s: np.array):
     )
 
 
-def visualize_pu_data_proba(x: np.array, s_proba: np.array):
+def plot_x_s_proba(x: np.array, s_proba: np.array):
     df = pd.DataFrame.from_dict(
         {
             "x_0": x[:, 0],

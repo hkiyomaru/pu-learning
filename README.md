@@ -17,7 +17,7 @@ $ poetry install
 
 Most notebooks are implementation of algorithms proposed for PU learning.
 
-Some notebooks include graphs created by Plotly, but as Github performs a static render of notebooks, they will not be rendered.  A rich view of notebooks can be shown by using [nbviewer](https://nbviewer.jupyter.org/).
+Some notebooks include graphs created by Plotly, but as Github performs a static render of notebooks, they will not be rendered.  A rich view of notebooks can be shown by using [nbviewer](https://nbviewer.jupyter.org/github/hkiyomaru/pu-learning/tree/main/).
 
 ## Reference
 
