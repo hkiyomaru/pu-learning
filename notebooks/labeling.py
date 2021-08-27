@@ -1,5 +1,5 @@
 import numpy as np
-import scipy.stats
+import json
 
 class LabelingMechanism():
     def __init__(self,
@@ -21,11 +21,17 @@ class LabelingMechanism():
         
     def propensity_score(self, x):
         x_e = x[:, self.propensity_attributes] * self.propensity_attributes_signs
-        scaled = self.min_prob + (x_e - self.minx) / (self.maxx - self.minx) * (self.max_prob - self.min_prob)
+        scaled = (self.min_prob + (x_e - self.minx) / (self.maxx - self.minx) * (self.max_prob - self.min_prob)) ** 4
         return (scaled**(1 / self.nb_propensity_attributes)).prod(1)
     
-def label_frequency(x, y, mean, cov, lm):
+    def load_param(self, path):
+        json_file = open(path, 'r')
+        param = json.load(json_file)
+        self.minx = param['minx']
+        self.maxx = param['maxx']
+        self.c = param['c']
+    
+def label_frequency(x, y, lm):
     score = lm.propensity_score(x[y==1])
-    proba = scipy.stats.multivariate_normal(mean,cov).pdf(x[y==1])
-    return score * proba / x[y==1].shape[0]
+    return score.sum() / x[y==1].shape[0]
     
