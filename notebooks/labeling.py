@@ -27,8 +27,8 @@ class LabelingMechanism():
     def load_param(self, path):
         json_file = open(path, 'r')
         param = json.load(json_file)
-        self.minx = param['minx']
-        self.maxx = param['maxx']
+        self.minx = np.array(param['minx'])
+        self.maxx = np.array(param['maxx'])
         self.c = param['c']
     
 def label_frequency(x, y, lm):
