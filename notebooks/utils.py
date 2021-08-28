@@ -80,7 +80,7 @@ def plot_x_s_proba(xs: np.array, ss_prob: np.array):
 
 def f1_prime(ys: np.array, ys_hat: np.array):
     r = recall_score(ys, ys_hat)
-    ratio_p = len(y_hats[y_hats == 1]) / len(y_hats)
+    ratio_p = len(ys_hat[ys_hat == 1]) / len(ys_hat)
     if ratio_p == 0.0:
         return 0.0
     else:
