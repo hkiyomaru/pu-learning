@@ -13,11 +13,9 @@ Use [poetry](https://python-poetry.org/).
 $ poetry install
 ```
 
-## About notebooks
+## Run Notebooks Online
 
-Most notebooks are implementation of algorithms proposed for PU learning.
-
-Some notebooks include graphs created by Plotly, but as Github performs a static render of notebooks, they will not be rendered.  A rich view of notebooks can be shown by using [nbviewer](https://nbviewer.jupyter.org/github/hkiyomaru/pu-learning/tree/main/).
+[https://mybinder.org/v2/gh/hkiyomaru/pu-learning/HEAD](https://mybinder.org/v2/gh/hkiyomaru/pu-learning/HEAD)
 
 ## Reference
 
