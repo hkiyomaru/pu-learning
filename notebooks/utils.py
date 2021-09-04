@@ -5,6 +5,7 @@ from sklearn.metrics import recall_score
 
 POSITIVE_COLOR = "#1E90FF"
 NEGATIVE_COLOR = "#FF6347"
+LABELED_COLOR = "#78B639"
 UNLABELED_COLOR = "#A9A9A9"
 
 
@@ -56,7 +57,7 @@ def plot_x_s(xs: np.array, ss: np.array):
         x="x_0",
         y="x_1",
         color="s",
-        color_discrete_map={"Unlabeled": UNLABELED_COLOR, "Positive": POSITIVE_COLOR},
+        color_discrete_map={"Unlabeled": UNLABELED_COLOR, "Positive": LABELED_COLOR},
     )
 
 
@@ -73,7 +74,7 @@ def plot_x_s_proba(xs: np.array, ss_prob: np.array):
         x="x_0",
         y="x_1",
         color="s",
-        color_continuous_scale=[UNLABELED_COLOR, POSITIVE_COLOR],
+        color_continuous_scale=[UNLABELED_COLOR, LABELED_COLOR],
         range_color=[0.0, 1.0],
     )
 
