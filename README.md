@@ -5,9 +5,17 @@
 - Python 3.9
 - Dependencies: See [pyproject.toml](./pyproject.toml).
 
-## Run Notebooks Locally
+## Run Notebooks
 
-Use [poetry](https://python-poetry.org/) to install dependencies.
+### Online
+
+Use [binder](https://mybinder.org/). The following link launches a Jupyter notebook server.
+
+- [https://mybinder.org/v2/gh/hkiyomaru/pu-learning/HEAD](https://mybinder.org/v2/gh/hkiyomaru/pu-learning/HEAD)
+
+### Local
+
+Use [poetry](https://python-poetry.org/) to install the dependencies.
 
 ```
 $ poetry install
@@ -18,10 +26,6 @@ Then launch a Jupyter notebook server.
 ```
 $ poetry run jupyter lab
 ```
-
-## Run Notebooks Online
-
-[https://mybinder.org/v2/gh/hkiyomaru/pu-learning/HEAD](https://mybinder.org/v2/gh/hkiyomaru/pu-learning/HEAD)
 
 ## Reference
 
