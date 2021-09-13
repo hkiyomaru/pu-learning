@@ -11,7 +11,7 @@ This repository contains notebooks that implement algorithms introduced in "[Lea
 
 ### Online
 
-Use [binder](https://mybinder.org/). The following link launches a Jupyter notebook server.
+Use [binder](https://mybinder.org/) as an online Jupyter notebook environment.
 
 - [https://mybinder.org/v2/gh/hkiyomaru/pu-learning/HEAD](https://mybinder.org/v2/gh/hkiyomaru/pu-learning/HEAD)
 
