@@ -29,5 +29,4 @@ $ poetry run jupyter lab
 
 ## Reference
 
-- Tutorial: https://dtai.cs.kuleuven.be/tutorials/pulearning/
-- Survey (the above tutorial is based on this): https://arxiv.org/abs/1811.04820
+- [Learning from positive and unlabeled data: a survey (Jessa Bekker and Jesse Davis, 2020)](https://arxiv.org/abs/1811.04820)
