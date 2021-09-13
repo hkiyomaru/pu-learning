@@ -33,7 +33,7 @@ $ poetry run jupyter lab
 
 ### PU datasets (Section 3.1)
 
-- data.ipynb: Create PU datasets that satisfy the SCAR, SAR, and PG assumptions. An example is represented as a tuple of an input vector $x$, the class $y$, the label $s$, and the propensity score $e$. Created datasets are saved in the `data` directory and used in the following notebooks.
+- data.ipynb: Create PU datasets that satisfy the SCAR, SAR, and PG assumptions. An example is a tuple of an input vector $x$, the class $y$, the label $s$, and the propensity score $e$. Created datasets are saved in the `data` directory and used in the following notebooks.
 - traditional_classifier.ipynb: Learn a traditional classifier $Pr(y=1|x)$ from a fully-labeled dataset. The performance can be seen as the upper bound that a classifier can achieve.
 - non_traditional_classifier.ipynb: Learn a non-traditional classifier $Pr(s=1|x)$ from a PU dataset.
 
