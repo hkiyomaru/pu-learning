@@ -5,12 +5,18 @@
 - Python 3.9
 - Dependencies: See [pyproject.toml](./pyproject.toml).
 
-## Installation
+## Run Notebooks Locally
 
-Use [poetry](https://python-poetry.org/).
+Use [poetry](https://python-poetry.org/) to install dependencies.
 
 ```
 $ poetry install
+```
+
+Then launch a Jupyter notebook server.
+
+```
+$ poetry run jupyter lab
 ```
 
 ## Run Notebooks Online
