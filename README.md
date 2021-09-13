@@ -1,5 +1,7 @@
 # Understanding PU Learning Through Implementing Its Algorithms
 
+This repository contains notebooks that implement algorithms introduced in "[Learning from positive and unlabeled data: a survey](https://arxiv.org/abs/1811.04820)."
+
 ## Development Environment
 
 - Python 3.9
