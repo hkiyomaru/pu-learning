@@ -43,6 +43,7 @@ def plot_x_y_proba(xs: np.array, ys_prob: np.array):
         range_color=[0.0, 1.0],
     )
 
+
 def plot_x_y_list(xs: np.array, ys_list: list):
     df = pd.DataFrame(index=[], columns=["x_0", "x_1", "y", "clf_index"])
     for i in range(len(ys_list)):
@@ -63,6 +64,7 @@ def plot_x_y_list(xs: np.array, ys_list: list):
         color="y",
         color_discrete_map={"Negative": NEGATIVE_COLOR, "Positive": POSITIVE_COLOR},
     )
+
 
 def plot_x_s(xs: np.array, ss: np.array):
     df = pd.DataFrame.from_dict(
