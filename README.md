@@ -52,6 +52,12 @@ $ poetry run jupyter lab
 - duplication.ipynb: This notebook first creates a new dataset from PU data so that a classifier learned on it is expected to be equal to a classifier trained from a fully labeled dataset, and then learns a classifier on it. This method assumes that the PU data meets the SCAR assumption.
 - empirical_risk_minimization.ipynb: This notebook first creates a new dataset from PU data so that a classifier learned on it is expected to be equal to a classifier trained from a fully labeled dataset, and then learn a classifier on it. This method does not put any assumption on the PU data.
 
+## Authors
+
+- Hirokazu Kiyomaru (@hkiyomaru)
+- Yukiya Wada (@YukiyaWada)
+- Nozomu Karai (@nozomu-karai)
+
 ## Reference
 
 - [Learning from positive and unlabeled data: a survey (Jessa Bekker and Jesse Davis, 2020)](https://arxiv.org/abs/1811.04820)
