@@ -5,9 +5,9 @@ This repository contains notebooks that implement algorithms introduced in "[Lea
 ## Development Environment
 
 - Python 3.9
-- Dependencies: See [pyproject.toml](./pyproject.toml).
+- Dependencies: See [requirements.txt](./requirements.txt).
 
-## Run Notebooks
+## Getting Started
 
 ### Online
 
@@ -17,16 +17,16 @@ Use [binder](https://mybinder.org/) to start a Jupyter notebook server online.
 
 ### Local
 
-Use [poetry](https://python-poetry.org/) to install the dependencies.
+Install the dependencies.
 
 ```
-$ poetry install
+$ pip install -r requirements.txt
 ```
 
 Then launch a Jupyter notebook server.
 
 ```
-$ poetry run jupyter lab
+$ jupyter lab
 ```
 
 ## Notebooks
