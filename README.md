@@ -5,7 +5,7 @@ This repository contains notebooks that implement algorithms introduced in "[Lea
 ## Development Environment
 
 - Python 3.9
-- Dependencies: See [requirements.txt](./requirements.txt) and [requirements.local.txt](./requirements.local.txt).
+- Dependencies: See [requirements.txt](./requirements.txt).
 
 ## Getting Started
 
@@ -20,7 +20,7 @@ Use [binder](https://mybinder.org/) to start a Jupyter notebook server online.
 Install the dependencies.
 
 ```
-$ pip install -r requirements.txt -r requirements.local.txt
+$ pip install -r requirements.txt
 ```
 
 Then launch a Jupyter notebook server.
