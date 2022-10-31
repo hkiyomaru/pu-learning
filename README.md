@@ -54,9 +54,9 @@ $ jupyter lab
 
 ## Authors
 
-- Hirokazu Kiyomaru (@hkiyomaru)
-- Yukiya Wada (@YukiyaWada)
-- Nozomu Karai (@nozomu-karai)
+- Hirokazu Kiyomaru ([@hkiyomaru](https://github.com/hkiyomaru))
+- Yukiya Wada ([@YukiyaWada](https://github.com/YukiyaWada))
+- Nozomu Karai ([@nozomu-karai](https://github.com/nozomu-karai))
 
 ## Reference
 
