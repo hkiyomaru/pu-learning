@@ -1,6 +1,6 @@
 # Understanding PU Learning Through Implementing Its Algorithms
 
-This repository contains notebooks that implement algorithms introduced in "[Learning from positive and unlabeled data: a survey](https://arxiv.org/abs/1811.04820)."
+This repository contains a collection of notebooks that implement algorithms discussed in the paper "[Learning from positive and unlabeled data: a survey](https://arxiv.org/abs/1811.04820)."
 
 ## Requirements
 
@@ -11,19 +11,19 @@ This repository contains notebooks that implement algorithms introduced in "[Lea
 
 ### Online
 
-Use [binder](https://mybinder.org/) to start the Jupyter notebook server online.
+You can quickly launch the Jupyter notebook server online using [Binder](https://mybinder.org/).
 
 - [https://mybinder.org/v2/gh/hkiyomaru/pu-learning/HEAD](https://mybinder.org/v2/gh/hkiyomaru/pu-learning/HEAD)
 
 ### Local
 
-Install the dependencies,
+1. Install the required dependencies by executing the following command:
 
 ```
 $ pip install -r requirements.txt
 ```
 
-and then launch the Jupyter notebook server.
+2. Launch the Jupyter notebook server:
 
 ```
 $ jupyter lab
@@ -33,24 +33,24 @@ $ jupyter lab
 
 ### PU dataset (Section 3.1)
 
-- **data.ipynb**: This notebook creates PU datasets that satisfy the SCAR, SAR, and PG assumptions. Created datasets are saved in the `data` directory and used in the following notebooks.
-- **traditional_classifier.ipynb**: This notebook learns a traditional classifier from a fully-labeled dataset. The performance can be seen as the upper bound that a classifier can achieve.
-- **non_traditional_classifier.ipynb**: This notebook learns a non-traditional classifier from a PU dataset.
+- **data.ipynb**: This notebook generates PU datasets that satisfy the SCAR, SAR, and PG assumptions. The created datasets are saved in the `data` directory for further usage in subsequent notebooks.
+- **traditional_classifier.ipynb**: This notebook trains a traditional classifier using a fully-labeled dataset. It provides a performance benchmark representing the upper bound achievable by a classifier.
+- **non_traditional_classifier.ipynb**: This notebook trains a non-traditional classifier using a PU dataset.
 
 ### Two-step Technique (Section 5.1)
 
-- **two_step_spy_nb.ipynb**: This notebook learns a classifir with a two-step technique. In the first step, reliable negative examples are selected by *spy*. In the second step, a naive bayes classifier is trained.
-- **two_step_1dnf_itersvm.ipynb**: This notebook learns a classifir with a two-step technique. In the first step, reliable negative examples are selected by 1-DNF. In the second step, an iterative SVM is trained.
+- **two_step_spy_nb.ipynb**: This notebook trains a classifir with a two-step technique. In the first step, reliable negative examples are identified by *spy*. In the second step, a naive bayes classifier is trained.
+- **two_step_1dnf_itersvm.ipynb**: This notebook demonstrates a two-step technique where reliable negative examples are selected using 1-DNF, followed by training an iterative SVM.
 
 ### Biased Learning (Section 5.2)
 
-- **biased_svm.ipynb**: This notebook learns a biased SVM that penalizes misclassified positive (labeled) and negative (unlabeled) examples differently. The weight is determined according to F1'.
+- **biased_svm.ipynb**: This notebook trains a biased SVM that penalizes misclassified positive (labeled) and negative (unlabeled) examples differently. The weight is determined according to F1'.
 
 ### Incorporation of the Class Prior (Section 5.3)
 
 - **postprocessing.ipynb**: This notebook predicts the probability of an example being positive by scaling the prediciton of a non-traditional classifier according to the label frequency.
-- **duplication.ipynb**: This notebook first creates a new dataset from a PU dataset so that a classifier learned on it is expected to be equal to the classifier trained from the fully labeled dataset. This method assumes that the PU data meets the SCAR assumption.
-- **empirical_risk_minimization.ipynb**: This notebook first creates a new dataset from a PU dataset so that a classifier learned on it is expected to be equal to the classifier trained from the fully labeled dataset. This method does not put any assumption on the PU data.
+- **duplication.ipynb**: This notebook creates a new dataset from a PU dataset, allowing a classifier trained on it to be equivalent to the one trained from a fully labeled dataset. This method assumes that the PU data satisfies the SCAR assumption.
+- **empirical_risk_minimization.ipynb**: This notebook creates a new dataset from a PU dataset to enable training a classifier that is expected to be equivalent to the one trained from a fully labeled dataset. This method does not impose any assumptions on the PU data.
 
 ## Authors
 
