@@ -1,4 +1,4 @@
-# Understanding PU Learning Through Implementing Its Algorithms
+# PU Learning Algorithms: Implementation Collection
 
 This repository contains a collection of notebooks that implement algorithms discussed in the paper "[Learning from positive and unlabeled data: a survey](https://arxiv.org/abs/1811.04820)."
 
