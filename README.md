@@ -2,6 +2,8 @@
 
 This repository contains a collection of notebooks that implement algorithms discussed in the paper "[Learning from positive and unlabeled data: a survey](https://arxiv.org/abs/1811.04820)."
 
+**Disclaimer**: This is not the official implementation. Although we carefully implemented the algorithms, we cannot guarantee that the implementation is correct. If you find any bugs, please let us know by creating an issue.
+
 ## Requirements
 
 - Python 3.9
